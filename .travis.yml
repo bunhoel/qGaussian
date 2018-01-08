@@ -8,6 +8,6 @@ repos:
   ropensci: http://packages.ropensci.org
  
 notifications:
-  email:
+  email: wagnersantos.ufs@hotmail.com
     on_success: change
 on_failure: change
