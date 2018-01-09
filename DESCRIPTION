@@ -17,5 +17,5 @@ NeedsCompilation: yes
 Packaged: 2017-09-28 12:32:53 UTC; ELSH
 Repository: CRAN
 Date/Publication: 2017-09-28 12:45:31 UTC
-URL: https://github.com/wagnerufs/qGaussian
-BugReports: http://github.com/wagnerufs/qGaussian/issues
+URL: https://github.com/bunhoel/qGaussian
+BugReports: http://github.com/bunhoel/qGaussian/issues
