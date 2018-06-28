@@ -2,7 +2,7 @@ Package: qGaussian
 Type: Package
 Title: The q-Gaussian Distribution
 Version: 0.1.6
-Date: 2017-09-28
+Date: 2018-28-06
 Author: Emerson Luis de Santa Helena <elsh@ufs.br>
         Wagner Santos de Lima <wagnersantos.ufs@hotmail.com>
 Maintainer: Wagner Santos de Lima <wagnersantos.ufs@hotmail.com>
@@ -14,8 +14,10 @@ LinkingTo: Rcpp
 LazyData: true
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
-Packaged: 2017-09-28 12:32:53 UTC; ELSH
+Packaged: 2018-05-17 19:38:39 UTC; ELSH
 Repository: CRAN
 Date/Publication: 2017-09-28 12:45:31 UTC
 URL: https://github.com/bunhoel/qGaussian
 BugReports: http://github.com/bunhoel/qGaussian/issues
+Repository: CRAN
+Suggests: testthat
