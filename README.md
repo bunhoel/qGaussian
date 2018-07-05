@@ -12,7 +12,12 @@
 
 ## Installation
 
-You can install `qGaussian` using the latest released version from CRAN:
+```r
+library(devtools)
+devtools::install_github("bunhoel/qGaussian")
+```
+
+Or, you can install `qGaussian` using the latest released version from CRAN:
 
 ```
 install.packages("qGaussian")
