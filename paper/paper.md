@@ -30,7 +30,9 @@ numerical decade from experimental measurements or numericals simulation that le
 flawless curve fitting. In other cases, a lot of observational data are only suggestive of a nonextensive approach. 
 A myriad of examples can be found in [@GT04] and [@tsallis]. 
 
-The $q$-Gaussian probability density function, named here $q$PDF [@santahelena], with $q$-mean $\mu_q$ and $q$-variance $\sigma_{q}$ can be written as:
+The $q$-Gaussian probability density function, named here $q$PDF [@santahelena], with $q$-mean $\mu_q$ and 
+$q$-variance $\sigma_{q}$ can be written as:
+
 \begin{equation}
 p(x;\mu_q,\sigma_q)=\frac{1}{\sigma_q {\text B}\left(\frac{\alpha}{2},\frac{1}{2}\right)}
 \sqrt{
@@ -53,15 +55,20 @@ $u(x)= 1+Z (x-\mu_q)^2 /  \sigma^{2}_{q}  $, and $\text B(a,b)$ is the  Beta fun
 \footnote[1]{
          Beta function:$\text B(a,b) = \int_{0}^{1} t^{a-1}(1-t)^{b-1}dt.$
 	}.
+	
 In the limit of $q\rightarrow 1$ a $q$PDF tends to a standard Gaussian distribution. 
-For $q < 1$, it is a compact support distribution, with $x \in [ \pm\sigma_q / \sqrt{-Z}]$. When $1 < q < 3$,  it is a heavy tail. In the last case, a power law asymptotic behaviour describes well this class of distribution.
+For $q < 1$, it is a compact support distribution, with $x \in [ \pm\sigma_q / \sqrt{-Z}]$. When $1 < q < 3$,  
+it is a heavy tail. In the last case, a power law asymptotic behaviour describes well this class of distribution.
 
 Given $X=(x_1,x_2,...x_n)$ a random variable, the cumulative distribution function ($q$CDF), $F(x)=P[X < x]$
+
 \begin{equation*}\label{csum}
 F(x) = \int_{-\infty}^{x}p(v)dv,
 \end{equation*}
- could be represented through $\text I_{w}(a,b)$, the regularized incomplete Beta function
-  \footnote[2]{
+
+could be represented through $\text I_{w}(a,b)$, the regularized incomplete Beta function
+
+\footnote[2]{
  	Incomplete Beta function:
  	$\text B_{w}(a,b) = \int_{0}^{w} t^{a-1}(1-t)^{b-1}dt$
  	and the regularized incomplete Beta function: $\text I_{w}(a,b) = \text B_{w}(a,b)/\text B(a,b)$
@@ -75,7 +82,9 @@ F(x;\mu_q;\sigma_q) = \left\{
 1-\frac{1}{2} \text I_{\beta}\left(\frac{\alpha}{2},\frac{1}{2}\right) & \textrm{if  $x> \mu_q$}, \\
 \end{array}\right.
 \end{equation}
+
 where
+
 \begin{equation*}
 \beta=\left\{
 \begin{array}{ll}
@@ -95,6 +104,7 @@ C(y;\mu_q,\sigma_q) = \left\{
 \end{array}\right.
 \end{equation}
 where
+
 \begin{equation*}
 \gamma=\left\{
 \begin{array}{ll}
@@ -104,25 +114,27 @@ where
 \end{equation*}
 
 
-It is worth calling attention
-despite the fact that $q$CDF and $q$QF obtained from a compact support distribution do not appear explicitly shown in  \cite{H14}, these could be deduced by the same straightforward method presented in it. 
+It is worth calling attention despite the fact that $q$CDF and $q$QF obtained from a compact support distribution do 
+not appear explicitly shown in  [@H14], these could be deduced by the same straightforward method presented in it. 
 
 
-The random numbers generator from a $q$PDF 
-can be implemented in different ways.
-The straightforward method use the quantile function to
-creates random sample elements $x_i=C(y_i;\mu_q,\sigma_q)$, where $y_i \in [0,1]$ are obtained from a uniform random number. In the second way, we use the Box-Muller algorithm as presented in \cite{TNT07} with the Mersenne-Twister algorithm as a uniform random number generator to create a $q$-Gaussian random variable $X\equiv N_q(\mu_q,\sigma_q) \equiv \mu_q+\sigma_q N_q(0,1)$ 
-where $N_q(0,1)$ is called standard $q$-Gaussian.
+The random numbers generator from a $q$PDF can be implemented in different ways. The straightforward method use the 
+quantile function to creates random sample elements $x_i=C(y_i;\mu_q,\sigma_q)$, where $y_i \in [0,1]$ are obtained from 
+a uniform random number. In the second way, we use the Box-Muller algorithm as presented in \cite{TNT07} with 
+the Mersenne-Twister algorithm as a uniform random number generator to create a $q$-Gaussian random variable
+$X\equiv N_q(\mu_q,\sigma_q) \equiv \mu_q+\sigma_q N_q(0,1)$  where $N_q(0,1)$ is called standard $q$-Gaussian.
 
-The classical kurtosis methods, when applied to a data set, are very sensitive to outlying values, however, it is possible to diminish this problem at a
-measurement of the tail heaviness by using robust statistic concepts. To doing that, given a sorted sample $\{x_1< \dots < \tilde{x}< \dots < x_n\}$ from a univariate distribution with median $\tilde x$,
- \cite{BHS06} established the medcouple   
-to evaluates the tail weight  when applied to $\{x_{1} < \dots < \tilde{x}\}$ and 
-$\{\tilde{x}< \dots < x_n\}$. This procedure can be applied to characterize the $q$-Gaussian with heavy tail and compact support. To this end, \cite{SH15} 
+The classical kurtosis methods, when applied to a data set, are very sensitive to outlying values, however, it is 
+possible to diminish this problem at a measurement of the tail heaviness by using robust statistic concepts. To doing that,
+given a sorted sample $\{x_1< \dots < \tilde{x}< \dots < x_n\}$ from a univariate distribution with median $\tilde x$,
+[@BHS06] established the medcouple to evaluates the tail weight  when applied to $\{x_{1} < \dots < \tilde{x}\}$ and 
+$\{\tilde{x}< \dots < x_n\}$. This procedure can be applied to characterize the $q$-Gaussian with heavy tail and 
+compact support. To this end, [@santahelena] 
 aiming to identify a $q$-Gaussian distribution at empirical data, proposed a relationship between medcouple and $q$ value obtained by curve fitting. 
   
 
-The main goal of the package \pkg{qGaussian} it is lets us to compute $q$PDF (\ref{pdf}), $q$CDF (\ref{cdf}) and $q$QF (\ref{qdf}) as same time generates random numbers from a $q$-Gaussian distribution parametrised by $q$ value. 
+The main goal of the package \pkg{qGaussian} it is lets us to compute $q$PDF (\ref{pdf}), $q$CDF (\ref{cdf}) 
+and $q$QF (\ref{qdf}) as same time generates random numbers from a $q$-Gaussian distribution parametrised by $q$ value. 
 To compute the Beta function and its inverse it is necessary the 
 \pkg{zipfR} package and \pkg{robustbase} is the package of robust statistic to implement a tail weight measurement. 
 
@@ -146,9 +158,12 @@ $q $ & \code{qbymc(X)} \\
 \label{tab}
 \end{table}
 
-In table \ref{tab}, the input argument \code{x} 
-represent a vector of quantiles for instructions \code{dqgauss(x,..)} and \code{pqgauss(x,..)} while \code{y} represent a vector of probabilities and \code{n} the length sample, for the random number generator. The parameters \code{q}, \code{mu} and \code{sig} are the entropic index, $q$-mean and $q$-variance, respectively,
-assuming the default values $(0,0,1)$. The medcouple is used into the \code{qbymc(X)} code to estimate $q$ value and standard error, receiving a random variable \code{X}, from the class "vector",  as input.
+In table \ref{tab}, the input argument \code{x} represent a vector of quantiles for instructions \code{dqgauss(x,..)} and
+\code{pqgauss(x,..)} while \code{y} represent a vector of probabilities and \code{n} the length sample, for the random 
+number generator. The parameters \code{q}, \code{mu} and \code{sig} are the entropic index, 
+$q$-mean and $q$-variance, respectively,
+assuming the default values $(0,0,1)$. The medcouple is used into the \code{qbymc(X)} code to estimate $q$ 
+value and standard error, receiving a random variable \code{X}, from the class "vector",  as input.
 We will see below, all the R's commands described above.
 
 
