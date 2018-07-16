@@ -17,20 +17,20 @@ bibliography: paper.bib
 # Summary
 
 Entropy is a fundamental concept in physics since it is in essence of second law of thermodynamics. 
-In the article 'Possible generalization of Boltzmann-Gibbs statistics' \cite{T88}, was 
+In the article 'Possible generalization of Boltzmann-Gibbs statistics' [@T88], was 
 postulated the Tsallis entropy $S_q[p(x)]=(1-\int_{-\infty}^{\infty}p^q(x)dx)/(q-1)$.
 Within the nonextensive approach, the sum of the entropy of two independent subsystems is given by: 
 $S_q(a+b)=S_q(a)+S_q(b)+(1-q)S_q(a)S_q(b)$, where $q$ is an entropic index.
 The $q$-Gaussian density function $p(x)$ arises from maximizing the $q$-entropy functional $S_q[p(x)]$ under constraints 
-\cite{T09} and \cite{H14} and it is important at the framework of the nonextensive statistical mechanics.
+[@tsallis] and [@H14] and it is important at the framework of the nonextensive statistical mechanics.
 
 There is a broad literature where the nonextensive approach is used to model systems and/or explain many-body problems and 
 issues related to Chaos Theory. In some cases, there exist strong evidences that theory works, certified by a broad 
 numerical decade from experimental measurements or numericals simulation that let us obtain a $q$ value by an almost 
 flawless curve fitting. In other cases, a lot of observational data are only suggestive of a nonextensive approach. 
-A myriad of examples can be found in \cite{GT04} and \cite{T09}. 
+A myriad of examples can be found in [@GT04] and [@tsallis]. 
 
-The $q$-Gaussian probability density function, named here $q$PDF ~\cite{SH15}, with $q$-mean $\mu_q$ and $q$-variance $\sigma_{q}$ can be written as:
+The $q$-Gaussian probability density function, named here $q$PDF [@santahelena], with $q$-mean $\mu_q$ and $q$-variance $\sigma_{q}$ can be written as:
 \begin{equation}
 p(x;\mu_q,\sigma_q)=\frac{1}{\sigma_q {\text B}\left(\frac{\alpha}{2},\frac{1}{2}\right)}
 \sqrt{
@@ -48,9 +48,10 @@ where  $Z=(q-1)/(3-q)$,
 \end{array}\right.
 \end{equation*}
  
-$u(x)= 1+Z (x-\mu_q)^2 /  \sigma^{2}_{q}  $, and $\text B(a,b)$ is the  Beta function \footnote[1]{
-	Beta function:
-	$\text B(a,b) = \int_{0}^{1} t^{a-1}(1-t)^{b-1}dt.$
+$u(x)= 1+Z (x-\mu_q)^2 /  \sigma^{2}_{q}  $, and $\text B(a,b)$ is the  Beta function 
+
+\footnote[1]{
+         Beta function:$\text B(a,b) = \int_{0}^{1} t^{a-1}(1-t)^{b-1}dt.$
 	}.
 In the limit of $q\rightarrow 1$ a $q$PDF tends to a standard Gaussian distribution. 
 For $q < 1$, it is a compact support distribution, with $x \in [ \pm\sigma_q / \sqrt{-Z}]$. When $1 < q < 3$,  it is a heavy tail. In the last case, a power law asymptotic behaviour describes well this class of distribution.
@@ -63,10 +64,8 @@ F(x) = \int_{-\infty}^{x}p(v)dv,
   \footnote[2]{
  	Incomplete Beta function:
  	$\text B_{w}(a,b) = \int_{0}^{w} t^{a-1}(1-t)^{b-1}dt$
- 	
  	and the regularized incomplete Beta function: $\text I_{w}(a,b) = \text B_{w}(a,b)/\text B(a,b)$
  	}
-  \cite{AS83}:
 
 \begin{equation}
 \label{cdf}
