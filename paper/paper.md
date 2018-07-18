@@ -19,18 +19,14 @@ bibliography: paper.bib
 Entropy is a fundamental concept in physics since it is in essence of second law of thermodynamics. 
 In the article 'Possible generalization of Boltzmann-Gibbs statistics' [@T88], was 
 postulated the Tsallis entropy $S_q[p(x)]=(1-\int_{-\infty}^{\infty}p^q(x)dx)/(q-1)$.
-Within the nonextensive approach, the sum of the entropy of two independent subsystems is given by: 
-$S_q(a+b)=S_q(a)+S_q(b)+(1-q)S_q(a)S_q(b)$, where $q$ is an entropic index.
 The $q$-Gaussian density function $p(x)$ arises from maximizing the $q$-entropy functional $S_q[p(x)]$ under constraints 
 [@tsallis] and [@H14] and it is important at the framework of the nonextensive statistical mechanics.
 
 There is a broad literature where the nonextensive approach is used to model systems and/or explain many-body problems and 
-issues related to Chaos Theory. In some cases, there exist strong evidences that theory works, certified by a broad 
-numerical decade from experimental measurements or numericals simulation that let us obtain a $q$ value by an almost 
-flawless curve fitting. In other cases, a lot of observational data are only suggestive of a nonextensive approach. 
-A myriad of examples can be found in [@GT04] and [@tsallis]. 
+issues related to Chaos. In some cases, there exist strong evidences that theory works when include a nonextensive approach 
+and certified by a broad numerical decade from experimental measurements or numericals simulation, that let us obtain a $q$ value by an almost flawless curve fitting. In other cases, a lot of observational data are only suggestive of a nonextensive approach. A myriad of examples can be found in [@GT04] and [@tsallis]. 
 
-The $q$-Gaussian probability density function, named here $q$PDF [@santahelena], with $q$-mean $\mu_q$ and 
+The $q$-Gaussian probability density function, named here $q$PDF, with $q$-mean $\mu_q$ and 
 $q$-variance $\sigma_{q}$ can be written as:
 
 \begin{equation}
@@ -41,7 +37,6 @@ p(x;\mu_q,\sigma_q)=\frac{1}{\sigma_q {\text B}\left(\frac{\alpha}{2},\frac{1}{2
 \label{pdf}
 \end{equation}
 where  $Z=(q-1)/(3-q)$,
-%\vskip .4 cm
 \begin{equation*}
 \alpha=\left\{
 \begin{array}{ll}
@@ -49,12 +44,7 @@ where  $Z=(q-1)/(3-q)$,
 1/Z  & \textrm{if $1<q<3$}, \\
 \end{array}\right.
 \end{equation*}
- 
-$u(x)= 1+Z (x-\mu_q)^2 /  \sigma^{2}_{q}  $, and $\text B(a,b)$ is the  Beta function 
-
-\footnote[1]{
-         Beta function:$\text B(a,b) = \int_{0}^{1} t^{a-1}(1-t)^{b-1}dt.$
-	}.
+$u(x)= 1+Z (x-\mu_q)^2/\sigma_{q}^{2}$, and $\text B(a,b)$ is the Beta function. 
 	
 In the limit of $q\rightarrow 1$ a $q$PDF tends to a standard Gaussian distribution. 
 For $q < 1$, it is a compact support distribution, with $x \in [ \pm\sigma_q / \sqrt{-Z}]$. When $1 < q < 3$,  
@@ -66,13 +56,8 @@ Given $X=(x_1,x_2,...x_n)$ a random variable, the cumulative distribution functi
 F(x) = \int_{-\infty}^{x}p(v)dv,
 \end{equation*}
 
-could be represented through $\text I_{w}(a,b)$, the regularized incomplete Beta function
-
-\footnote[2]{
- 	Incomplete Beta function:
- 	$\text B_{w}(a,b) = \int_{0}^{w} t^{a-1}(1-t)^{b-1}dt$
- 	and the regularized incomplete Beta function: $\text I_{w}(a,b) = \text B_{w}(a,b)/\text B(a,b)$
- 	}
+could be represented through $\text I_{w}(a,b) = \text B_{w}(a,b)/\text B(a,b)$, the regularized incomplete Beta function,
+where $\text B_{w}(a,b) = \int_{0}^{w} t^{a-1}(1-t)^{b-1}dt$, is the Incomplete Beta function.
 
 \begin{equation}
 \label{cdf}
@@ -113,14 +98,10 @@ where
 \end{array}\right.
 \end{equation*}
 
-
-It is worth calling attention despite the fact that $q$CDF and $q$QF obtained from a compact support distribution do 
-not appear explicitly shown in  [@H14], these could be deduced by the same straightforward method presented in it. 
-
-
+ 
 The random numbers generator from a $q$PDF can be implemented in different ways. The straightforward method use the 
 quantile function to creates random sample elements $x_i=C(y_i;\mu_q,\sigma_q)$, where $y_i \in [0,1]$ are obtained from 
-a uniform random number. In the second way, we use the Box-Muller algorithm as presented in \cite{TNT07} with 
+a uniform random number. In the second way, we use the Box-Muller algorithm as presented in [@thistleton] with 
 the Mersenne-Twister algorithm as a uniform random number generator to create a $q$-Gaussian random variable
 $X\equiv N_q(\mu_q,\sigma_q) \equiv \mu_q+\sigma_q N_q(0,1)$  where $N_q(0,1)$ is called standard $q$-Gaussian.
 
@@ -164,14 +145,7 @@ number generator. The parameters \code{q}, \code{mu} and \code{sig} are the entr
 $q$-mean and $q$-variance, respectively,
 assuming the default values $(0,0,1)$. The medcouple is used into the \code{qbymc(X)} code to estimate $q$ 
 value and standard error, receiving a random variable \code{X}, from the class "vector",  as input.
-We will see below, all the R's commands described above.
-
-
-The `qGaussian` is an R package that contain probability distributions functions and others mathematical functions related 
-to the Tsallis Statistics [@tsallis]. The user can apply a statistical test to verify how the q-Gaussian distribution adjusts 
-to the empirical data [@santahelena]. By default it is provided the density, distribution function, quantile function and 
-random generation [@thistleton] for the q-Gaussian distribution. 
-A full text [@full] can be find in https://arxiv.org/abs/1703.06172
+Examples can be found in https://arxiv.org/abs/1703.06172
   
 
 # References
